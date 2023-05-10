@@ -1,0 +1,79 @@
+{% extends 'adminlte/lib/_main_sidebar.html' %}
+
+{% block nav_links %}
+    <li>
+        <a href="{% url 'dashboard_view' %}">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+        </a>
+    </li>
+    <li class="treeview">
+        <a href="{% url 'add_agm_indoor_view' %}">
+            <i class="fa fa-group"></i> <span>AGM Devices </span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li>
+                <a href="{% url 'add_agm_indoor_view' %}">
+                    <i class="fa fa-user"></i> Add AGM  Data
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'list_agm_indoor_view' %}">
+                    <i class="fa fa-user"></i> List AGM  Data
+                </a>
+            </li>
+        </ul>
+    </li>
+{#    <li class="treeview">#}
+{#        <a href="#">#}
+{#            <i class="fa fa-group"></i> <span>AGM Outdoor </span>#}
+{#            <span class="pull-right-container">#}
+{#                <i class="fa fa-angle-left pull-right"></i>#}
+{#            </span>#}
+{#        </a>#}
+{#        <ul class="treeview-menu">#}
+{#            <li>#}
+{#                <a href="">#}
+{#                    <i class="fa fa-user"></i> Add AGM Outdoor Data#}
+{#                </a>#}
+{#            </li>#}
+{#            <li>#}
+{#                <a href="">#}
+{#                    <i class="fa fa-user"></i> List AGM Outdoor Data#}
+{#                </a>#}
+{#            </li>#}
+{#        </ul>#}
+{#    </li>#}
+    <li class="treeview">
+        <a href="">
+            <i class="fa fa-group"></i> <span>TeleDosimeter</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li>
+                <a href="{% url 'add_employee_view' %}">
+                    <i class="fa fa-user"></i> Add Employee
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'list_employee_view' %}">
+                    <i class="fa fa-user"></i> Employee List
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'add_teledosimeter_view' %}">
+                    <i class="fa fa-user"></i> Add Teledosimeters
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'list_teledosimeter_view' %}">
+                    <i class="fa fa-user"></i> List Teledosimeters
+                </a>
+            </li>
+        </ul>
+    </li>
+{% endblock nav_links %}

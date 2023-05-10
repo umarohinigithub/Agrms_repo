@@ -1,0 +1,167 @@
+{% extends 'adminlte/base.html' %}
+
+{#{% block extra_head %}#}
+{#    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">#}
+{#{% endblock %}#}
+
+{% block title %}AGRMS{% endblock %}
+{% block content_header %}
+    <section class="content-header">
+        <h1>
+            TeleDosimeter
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">TeleDosimeter</li>
+        </ol>
+    </section>
+{% endblock %}
+{% block content %}
+
+    <div class="row">
+        {% for data in teledata %}
+        <div class="col-lg-3 col-xs-6">
+
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h1>Employee Name:{{ data.employee_name }}</h1>
+                    <h4>Device Id:{{ data.device_id }} </h4>
+                    <h4>Total Dose:{{ data.total_dose }} </h4>
+                    <h4>Count:{{ data.count }}</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+{#                <a href="#" class="small-box-footer" data-toggle="modal" data-target="#modal-success">More info <i class="fa fa-arrow-circle-right"></i></a>#}
+            </div>
+        </div>
+        {% endfor %}
+{#        <div class="col-lg-3 col-xs-6">#}
+{##}
+{#            <div class="small-box bg-green">#}
+{#                <div class="inner">#}
+{#                     <h2>User Name:user2</h2>#}
+{#                    <h4>Device Id:dev2 </h4>#}
+{#                    <h4>Total Dose:15 </h4>#}
+{#                    <h4>Count:5</h4>#}
+{#                </div>#}
+{#                <div class="icon"data-percentage="5%" style="color: blueviolet">#}
+{#                    <i class="fa fa-battery-1 text-red" style="font-size: 30px;"></i>#}
+{#                </div>#}
+{#                <div class="icon">#}
+{#                    <i class="ion ion-stats-bars"></i>#}
+{#                </div>#}
+{#                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        <div class="col-lg-3 col-xs-6">#}
+{##}
+{#            <div class="small-box bg-yellow">#}
+{#                <div class="inner">#}
+{#                     <h2>User Name:user3</h2>#}
+{#                    <h4>Device Id:dev3 </h4>#}
+{#                    <h4>Total Dose:15 </h4>#}
+{#                    <h4>Count:5</h4>#}
+{#                </div>#}
+{#                <div class="icon" data-percentage="75">#}
+{#                    <i class="fa fa-battery-0 text-gray" style="font-size: 30px;"></i>#}
+{#                </div>#}
+{#                <div class="icon">#}
+{#                    <i class="ion ion-person-add"></i>#}
+{#                </div>#}
+{#                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        <div class="col-lg-3 col-xs-6">#}
+{##}
+{#            <div class="small-box bg-red">#}
+{#                <div class="inner">#}
+{#                     <h2>User Name:user4</h2>#}
+{#                    <h4>Device Id:dev4 </h4>#}
+{#                    <h4>Total Dose:15 </h4>#}
+{#                    <h4>Count:10</h4>#}
+{#                </div>#}
+{#                <div class="icon"data-percentage="75">#}
+{#                    <i class="fa fa-battery-half text-yellow" style="font-size: 30px;"></i>#}
+{#                </div>#}
+{#                <div class="icon">#}
+{#                    <i class="ion ion-pie-graph"></i>#}
+{#                </div>#}
+{#                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="col-lg-3 col-xs-6">#}
+{##}
+{#            <div class="small-box bg-red">#}
+{#                <div class="inner">#}
+{#                     <h2>User Name:user5</h2>#}
+{#                    <h4>Device Id:dev5 </h4>#}
+{#                    <h4>Total Dose:20 </h4>#}
+{#                    <h4>Count:5</h4>#}
+{#                </div>#}
+{#                <div class="icon"data-percentage="75">#}
+{#                    <i class="fa fa-battery-3 text-green" style="font-size: 30px;"></i>#}
+{#                </div>#}
+{#                <div class="icon">#}
+{#                    <i class="ion ion-pie-graph"></i>#}
+{#                </div>#}
+{#                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>#}
+{#            </div>#}
+{#        </div>#}
+
+
+    </div>
+
+
+{#    <div class="row">#}
+{#        <div class="col-xs-12">#}
+{#            <div class="box box-default">#}
+{#                <div class="box-header with-border">#}
+{#                    <h3 class="box-title">Modal Examples</h3>#}
+{#                </div>#}
+{#                <div class="box-body">#}
+{#                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">#}
+{#                        Launch Default Modal#}
+{#                    </button>#}
+{#                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">#}
+{#                        Launch Info Modal#}
+{#                    </button>#}
+{#                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-danger">#}
+{#                        Launch Danger Modal#}
+{#                    </button>#}
+{#                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-warning">#}
+{#                        Launch Warning Modal#}
+{#                    </button>#}
+{#                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success">#}
+{#                        Launch Success Modal#}
+{#                    </button>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+{#    <div class="modal modal-success fade" id="modal-success" style="display: none;">#}
+{#        <div class="modal-dialog">#}
+{#            <div class="modal-content">#}
+{#                <div class="modal-header">#}
+{#                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+{#                        <span aria-hidden="true">×</span></button>#}
+{#                    <h4 class="modal-title">Success Modal</h4>#}
+{#                </div>#}
+{#                <div class="modal-body">#}
+{#                    <p>One fine body…</p>#}
+{#                </div>#}
+{#                <div class="modal-footer">#}
+{#                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>#}
+{#                    <button type="button" class="btn btn-outline">Save changes</button>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{##}
+{#    </div>#}
+{% endblock %}

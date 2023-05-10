@@ -1,0 +1,30 @@
+{% extends 'adminlte/base.html' %}
+{% block content_header %}
+{#    <section class="content-header">#}
+{#        <h1>#}
+{#            Area Gamma Monitors#}
+{#            <small>Control panel</small>#}
+{#        </h1>#}
+{#        <ol class="breadcrumb">#}
+{#            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>#}
+{#            <li class="active">Area Gamma Monitors</li>#}
+{#        </ol>#}
+{#    </section>#}
+{% endblock %}
+{% block content %}
+<div class="box box-warning">
+            <div class="box-header with-border">
+              <h3 class="box-title">Add New Employees</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <form method="post">{% csrf_token %}
+              <p><h4 style="color: red">* Are you sure you want to delete </h4>"{{ object }}"?</p>
+            {{ form }}
+              <button class="btn btn-primary" type="submit" >Confirm</button>
+{#              <input type="submit" value="Confirm">#}
+          </form>
+            </div>
+            <!-- /.box-body -->
+          </div>
+{% endblock %}
