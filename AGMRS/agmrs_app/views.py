@@ -9,7 +9,7 @@ from django_tables2 import SingleTableView
 from agmrs_app.filter import EmployeeFilter
 from agmrs_app.forms import AdminLoginForm, AddEmployeeForm, EditEmployeeForm, AddAgmIndoorForm, EditAgmIndoorForm, \
     AddTeledosimeterForm, EditTeledosimeterForm
-from agmrs_app.models import AgrmsEmployee, AgmDevice, TelidosiDevice
+from agmrs_app.models import AgrmsEmployee, AgmDevice, TelidosiDevice, AgmDeviceData
 from agmrs_app.table import EmployeeTable, AgmIndoorTable, TeledosimeterTable
 
 
@@ -57,12 +57,33 @@ class AgmIndoorView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['data'] = AgmDevice.objects.filter(device_type='indoor').order_by('-date_time')[:7]
-        return context
+        devices_indoor = AgmDevice.objects.filter(device_type=AgmDevice.INDOOR)
+        data_ids = []
+        for device in devices_indoor:
+            device_data = AgmDeviceData.objects.filter(device=device).last()
+            if device_data:
+                data_ids.append(device_data.id)
+        context['device_data'] = AgmDeviceData.objects.filter(id__in=data_ids)
 
+        return context
 
 # class AgmOutdoorView(TemplateView):
 #     template_name = 'agmrs_app/agm_outdoor.html'
+
+def get_current_data_outdoor(request):
+    print("get_current_data_outdoor")
+    context = {}
+    if request.htmx:
+        devices_outdoor = AgmDevice.objects.filter(device_type=AgmDevice.OUTDOOR)
+        data_ids = []
+        for device in devices_outdoor:
+            device_data = AgmDeviceData.objects.filter(device=device).last()
+            if device_data:
+                data_ids.append(device_data.id)
+        print("+++++++++++++++++", data_ids)
+        context['device_data'] = AgmDeviceData.objects.filter(id__in=data_ids)
+        return render(request, template_name='agmrs_app/agm_outdoor_partial.html', context=context)
+
 
 
 class AgmOutdoorView(TemplateView):
@@ -70,7 +91,15 @@ class AgmOutdoorView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['datas'] = AgmDevice.objects.filter(device_type='outdoor').order_by('-date_time')[:8]
+        devices_outdoor = AgmDevice.objects.filter(device_type=AgmDevice.OUTDOOR)
+        data_ids = []
+        for device in devices_outdoor:
+            device_data = AgmDeviceData.objects.filter(device=device).last()
+            if device_data:
+                data_ids.append(device_data.id)
+        print("+++++++++++++++++", data_ids)
+        context['device_data'] = AgmDeviceData.objects.filter(id__in=data_ids)
+
         return context
 
 
