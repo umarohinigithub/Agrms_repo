@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="def16758-5b99-4c12-a18b-fe995fa2b5ae" name="Default Changelist" comment="" />
+    <list default="true" id="def16758-5b99-4c12-a18b-fe995fa2b5ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/base.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,6 +97,7 @@
       <updated>1683715218272</updated>
       <workItem from="1683715231605" duration="906000" />
       <workItem from="1683776891550" duration="648000" />
+      <workItem from="1683779902292" duration="1439000" />
     </task>
     <servers />
   </component>
@@ -157,9 +161,13 @@
       <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state width="1272" height="215" key="GridCell.Tab.1.right/48.27.1318.741@48.27.1318.741" timestamp="1683715148177" />
-    <state x="196" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1683715424444">
+    <state x="196" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1683780037144">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state x="196" y="31" width="1022" height="737" key="SettingsEditor/48.27.1318.741@48.27.1318.741" timestamp="1683715424444" />
+    <state x="196" y="31" width="1022" height="737" key="SettingsEditor/48.27.1318.741@48.27.1318.741" timestamp="1683780037143" />
+    <state x="302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1683781302183">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/48.27.1318.741@48.27.1318.741" timestamp="1683781302183" />
   </component>
 </project>
