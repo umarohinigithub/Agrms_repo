@@ -3,7 +3,7 @@ from django.urls import path
 from agmrs_app.views import TestTemplateView, AdminDashBoardView, AgmIndoorView, AgmOutdoorView, AdminLoginView, \
     AdminLogoutView, TeledosiView, AddEmployeeView, ListEmployeeView, EditEmployeeView, DeleteEmployeeView, \
     AddAgmIndoorView, ListAgmIndoorView, EditAgmIndoorView, AddTeledosimeterView, ListTeledosimeterView, \
-    EditTeledosimeterView, DeleteAgmIndoorView, DeleteTeledosimeterView
+    EditTeledosimeterView, DeleteAgmIndoorView, DeleteTeledosimeterView, get_current_data_outdoor
 
 urlpatterns = [
     # path('', AdminDashboardView.as_view(), name='admin_dashboard_view'),
@@ -32,4 +32,7 @@ urlpatterns = [
      path('teledosimeter/list/', ListTeledosimeterView.as_view(), name='list_teledosimeter_view'),
      path('teledosimeter/edit<int:device_id>/', EditTeledosimeterView.as_view(), name='edit_teledosimeter_view'),
      path('teledosimeter/delete<int:device_id>/',DeleteTeledosimeterView.as_view(), name ='delete_teledosimeter_view'),
+
+    path('get-current-data/', get_current_data_outdoor, name='get_current_data_outdoor'),
+
 ]

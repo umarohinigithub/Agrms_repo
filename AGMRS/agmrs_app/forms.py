@@ -24,23 +24,23 @@ class AddAgmIndoorForm(forms.ModelForm):
     # device_type = forms.ChoiceField(choices=AgmDevice.DEVICE_TYPE_CHOICES)
     class Meta:
         model = AgmDevice
-        fields = ['name', 'device_id', 'location', 'present_value', 'average_value', 'battery_percentage', 'device_type']
+        fields = ['name', 'device_id', 'device_type']
 
 
 class EditAgmIndoorForm(forms.ModelForm):
     class Meta:
         model = AgmDevice
-        fields = ['device_type','name', 'device_id', 'location', 'present_value', 'average_value', 'battery_percentage']
+        fields = ['device_type','name', 'device_id']
 
 
 class AddTeledosimeterForm(forms.ModelForm):
     employee_name = forms.ModelChoiceField(queryset=AgrmsEmployee.objects.all())
     class Meta:
         model = TelidosiDevice
-        fields = ['name', 'device_id', 'employee_name', 'total_dose', 'count']
+        fields = ['name', 'device_id', 'employee_name']
 
 
 class EditTeledosimeterForm(forms.ModelForm):
     class Meta:
         model = TelidosiDevice
-        fields = ['name', 'device_id','employee_name', 'total_dose', 'count']
+        fields = ['name', 'device_id','employee_name']
