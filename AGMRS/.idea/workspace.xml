@@ -23,32 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="def16758-5b99-4c12-a18b-fe995fa2b5ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AGMRS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AGMRS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/mock_data_teledosi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGMRS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AGMRS/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/table.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/table.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/add_employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/add_employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/delete_employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/delete_employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/edit_employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/edit_employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/list_employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/list_employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/add_agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/add_agm_indoor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/delete_agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/delete_agm_indoor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/edit_agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/edit_agm_indoor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/list_agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/list_agm_indoor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor_partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor_partial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/add_teledosimeter.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/add_teledosimeter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/delete_teledosimeter.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/delete_teledosimeter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/edit_teledosimeter.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/edit_teledosimeter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/list_teledosimeter.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/list_teledosimeter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +64,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/elementz/PycharmProjects/AGRMS_REPO/AGMRS",
+    "last_opened_file_path": "/home/elementz/PycharmProjects/ig_car/IGCAR_RTLS_WebProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -132,7 +112,7 @@
       <workItem from="1683776891550" duration="648000" />
       <workItem from="1683779902292" duration="1439000" />
       <workItem from="1683783240605" duration="3418000" />
-      <workItem from="1683788968492" duration="4448000" />
+      <workItem from="1683788968492" duration="10458000" />
     </task>
     <servers />
   </component>

@@ -10,11 +10,11 @@
             </div>
             <div class="icon" data-percentage="{{ data.battery_percentage}}%"style="color: black; font-size:0px">
                 {% if data.battery_percentage >= 75 %}
-                    <i class="fa fa-battery-full text-green" style="font-size: 30px;"></i>
+                    <i class="fa fa-battery-full" style="color:darkgreen;font-size: 30px;"></i>
                 {% elif data.battery_percentage >= 50 %}
                    <i class="fa fa-battery-half text-yellow" style="font-size: 30px;"></i>
                 {% elif data.battery_percentage >= 25 %}
-                    <i class="fa fa-battery-1 text-red" style="font-size: 30px;"></i>
+                    <i class="fa fa-battery-1 " style="font-size: 30px;color: darkred"></i>
                  {%else %}
                    <i class="fa fa-battery-0 text-gray" style="font-size: 30px;"></i>
                 {% endif %}

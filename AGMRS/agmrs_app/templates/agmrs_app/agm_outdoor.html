@@ -40,7 +40,6 @@
 {% block content %}
    <div ></div>
   <div class="row" id="device_data"   hx-get="{% url 'get_current_data_outdoor' %}" hx-trigger="every 2s" >
-
 {% include 'agmrs_app/agm_outdoor_partial.html' %}
   </div>
 {% endblock %}
