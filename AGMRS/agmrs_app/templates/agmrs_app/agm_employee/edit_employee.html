@@ -1,16 +1,20 @@
-{% extends 'adminlte/base.html' %}
-
-{% block content_header %}
-    <h3 class="box-title">Update Employee</h3>
-{% endblock %}
+{% extends 'agmrs_app/base.html' %}
 
 {% block content %}
     <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Update Employee Data</h3>
+        </div>
         <div class="box-body">
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Update</button>
+                 {% for field in form %}
+                        <div class="form-group">
+                            {{ field.errors }}
+                            {{ field.label_tag }} {{ field }}
+                        </div>
+                    {% endfor %}
+                <button type="submit" class="btn btn-primary">ADD</button>
             </form>
         </div>
     </div>

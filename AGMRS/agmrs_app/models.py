@@ -54,9 +54,11 @@ class AgmDeviceData(models.Model):
         (INDOOR, 'Indoor'),
         (OUTDOOR, 'Outdoor'),
     ]
+    ALARM = 'alarm'
+    NORMAL = 'normal'
     STATUS_CHOICES = (
-        ('alarm', 'Alarm'),
-        ('normal', 'Normal'),
+        (ALARM, 'Alarm'),
+        (NORMAL, 'Normal'),
     )
     device = models.ForeignKey(AgmDevice, on_delete=models.CASCADE)
     location = models.CharField(max_length=100)

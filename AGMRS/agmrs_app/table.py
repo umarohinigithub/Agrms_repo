@@ -32,7 +32,7 @@ class AgmIndoorTable(tables.Table):
         template_name = "django_tables2/bootstrap.html"
         attrs = {'class': 'table table-sm'}
         # fields = ('employee_id', 'name')  # Add more fields as needed
-        fields = ['device_type','name', 'device_id', 'location', 'present_value' ]
+        fields = ['device_type','name', 'device_id' ]
 
     def render_edit(self, value, record):
         edit_url = reverse('edit_agm_indoor_view', kwargs={'device_id': record.id})
@@ -51,7 +51,7 @@ class TeledosimeterTable(tables.Table):
         template_name = "django_tables2/bootstrap.html"
         attrs = {'class': 'table table-sm'}
         # fields = ('employee_id', 'name')  # Add more fields as needed
-        fields = ['name', 'device_id','employee_name', 'total_dose', 'count' ]
+        fields = ['name', 'device_id','employee_name']
 
     def render_edit(self, value, record):
         edit_url = reverse('edit_teledosimeter_view', kwargs={'device_id': record.id})

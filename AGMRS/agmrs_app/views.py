@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.views import View
-from django.views.generic import TemplateView, FormView, ListView, UpdateView, DeleteView
+from django.views.generic import TemplateView, FormView, ListView, UpdateView, DeleteView, CreateView
 from django_filters.views import FilterView
 from django_tables2 import SingleTableView
 
@@ -140,7 +140,7 @@ class ListEmployeeView(SingleTableView, FilterView):
     table_class = EmployeeTable
     template_name = 'agmrs_app/agm_employee/list_employee.html'
     context_table_name = 'table'
-    paginate_by = 3
+    paginate_by = 10
     # filterset_class = EmployeeFilter
 
 
@@ -166,7 +166,7 @@ class DeleteEmployeeView(DeleteView):
     ordering = 'employee_id'  # Specify the ordering field here
 
 
-class AddAgmIndoorView(FormView):
+class AddAgmIndoorView(CreateView):
     template_name = 'agmrs_app/agm_indoor/add_agm_indoor.html'
     form_class = AddAgmIndoorForm
     model = AgmDevice
@@ -179,18 +179,7 @@ class AddAgmIndoorView(FormView):
         form.instance = AgmDevice()
         form.instance.name = form.cleaned_data['name']
         form.instance.device_id = form.cleaned_data['device_id']
-        form.instance.location = form.cleaned_data['location']
-        form.instance.present_value = form.cleaned_data['present_value']
-        form.instance.average_value = form.cleaned_data['average_value']
-        form.instance.battery_percentage = form.cleaned_data['battery_percentage']
         form.instance.device_type = form.cleaned_data['device_type']
-
-        # Set the status based on the condition
-        if form.instance.present_value > (0.5 * form.instance.average_value):
-            form.instance.status = 'ALARM'
-        else:
-            form.instance.status = 'NORMAL'
-
         # Save the form instance
         form.instance.save()
 
@@ -202,7 +191,7 @@ class ListAgmIndoorView(SingleTableView, FilterView):
     table_class = AgmIndoorTable
     template_name = 'agmrs_app/agm_indoor/list_agm_indoor.html'
     context_table_name = 'table'
-    paginate_by = 3
+    paginate_by = 10
     ordering = ['id']
     # filterset_class = EmployeeFilter
 
@@ -228,7 +217,7 @@ class DeleteAgmIndoorView(DeleteView):
     success_url = reverse_lazy('list_agm_indoor_view')
 
 
-class AddTeledosimeterView(FormView):
+class AddTeledosimeterView(CreateView):
     template_name = 'agmrs_app/teledosimeter/add_teledosimeter.html'
     form_class = AddTeledosimeterForm
     model = AgmDevice
@@ -240,8 +229,6 @@ class AddTeledosimeterView(FormView):
         form.instance = TelidosiDevice()
         form.instance.name = form.cleaned_data['name']
         form.instance.device_id = form.cleaned_data['device_id']
-        form.instance.location = form.cleaned_data['total_dose']
-        form.instance.present_value = form.cleaned_data['count']
         # Save the form instance
         employee_name = form.cleaned_data['employee_name']
         employee = AgrmsEmployee.objects.get(name=employee_name)
@@ -263,7 +250,7 @@ class ListTeledosimeterView(SingleTableView, FilterView):
     table_class = TeledosimeterTable
     template_name = 'agmrs_app/teledosimeter/list_teledosimeter.html'
     context_table_name = 'table'
-    paginate_by = 3
+    paginate_by = 10
     ordering = ['id']
     # filterset_class = EmployeeFilter
 
