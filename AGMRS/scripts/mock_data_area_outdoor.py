@@ -15,8 +15,14 @@ def run():
         for device in agrms_outdoor_devices:
             random_battery = random.randint(20, 100)
             random_present = random.randint(5, 20)
+            status = AgmDeviceData.NORMAL
+            avg_val = 10
+            if(random_present > avg_val * 1.5):
+
+                status = AgmDeviceData.ALARM
+
             AgmDeviceData.objects.create(device=device, location='Plamoodu', battery_percentage=random_battery,
                                          present_value=random_present,
-                                         average_value=10, status=AgmDeviceData.ALARM)
+                                         average_value=avg_val, status=status)
 
         time.sleep(1)
