@@ -54,6 +54,7 @@ class AdminDashBoardView(TemplateView):
         context['active_admin_dash'] = 'active treeview menu-open'
         context['indoor_count'] = AgmDevice.objects.filter(device_type=AgmDevice.INDOOR).count()
         context['outdoor_count'] = AgmDevice.objects.filter(device_type=AgmDevice.OUTDOOR).count()
+        context['teledosimeter'] = TelidosiData.objects.all().count()
         return context
 
 
@@ -122,6 +123,20 @@ def get_current_data_teledosi(request):
         context['device_data'] = TelidosiData.objects.filter(id__in=data_ids)
         return render(request, template_name='agmrs_app/teledosimeter_partial.html', context=context)
 
+def get_current_data_teledosi(request):
+    print("get_current_data_teledosi")
+    context = {}
+    if request.htmx:
+        devices_teledosi = TelidosiDevice.objects.all()
+        data_ids = []
+        for device in devices_teledosi:
+            device_data = TelidosiData.objects.filter(device=device).last()
+            if device_data:
+                data_ids.append(device_data.id)
+        # print("+++++++++++++++++", data_ids)
+        context['device_data'] = TelidosiData.objects.filter(id__in=data_ids)
+        return render(request, template_name='agmrs_app/teledosimeter_partial.html', context=context)
+
 
 class AgmOutdoorView(TemplateView):
     template_name = 'agmrs_app/agm_outdoor.html'
@@ -142,8 +157,6 @@ class AgmOutdoorView(TemplateView):
 
 class TeledosiView(TemplateView):
     template_name = 'agmrs_app/teledosimeter.html'
-
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         devices_teledosi = TelidosiDevice.objects.all()
@@ -152,7 +165,6 @@ class TeledosiView(TemplateView):
             device_data = TelidosiData.objects.filter(device=device).last()
             if device_data:
                 data_ids.append(device_data.id)
-        # print("+++++++++++++++++", data_ids)
         context['device_data'] = TelidosiData.objects.filter(id__in=data_ids)
         context['active_admin_dash'] = 'active treeview menu-open'
         return context
@@ -443,6 +455,7 @@ class AgmIndoorDeviceViewMore(SingleTableView, FilterView):
         context['table'] = table
         return context
 
+
 class TeledosiDeviceViewMore(SingleTableView, FilterView):
     model = TelidosiData
     table = TeledosidataViewMore
@@ -459,4 +472,3 @@ class TeledosiDeviceViewMore(SingleTableView, FilterView):
         context['active_admin_dash'] = 'treeview active'
         context['table'] = table
         return context
-
