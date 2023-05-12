@@ -29,7 +29,7 @@
     <section class="content-header">
         <h1>
             Area Gamma Monitors
-            <small>Indoor</small>
+            <small>Outdoor</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -38,7 +38,6 @@
     </section>
 {% endblock %}
 {% block content %}
-   <div ></div>
   <div class="row" id="device_data"   hx-get="{% url 'get_current_data_outdoor' %}" hx-trigger="every 2s" >
 {% include 'agmrs_app/agm_outdoor_partial.html' %}
   </div>

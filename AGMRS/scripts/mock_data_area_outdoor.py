@@ -10,7 +10,6 @@ import time
 
 def run():
     agrms_outdoor_devices = AgmDevice.objects.all()
-
     while True:
         print("Running mock_data_area_outdoor", time.time())
         for device in agrms_outdoor_devices:
