@@ -394,32 +394,14 @@ class AgmIndoorDeviceViewMore(SingleTableView, FilterView):
     table = DevicedataViewMore
     template_name = 'agmrs_app/agm_indoor/device_agm_view_more.html'
 
-    # def get_success_url(self):
-    #     device_id = self.kwargs['device_id']
-    #     return reverse('edit_agm_indoor_view', kwargs={'device_id': self.kwargs['device_id']})
-    #
-    # def get_object(self, queryset=None):
-    #     device_id = self.kwargs['device']
-    #     return self.model.objects.get(id=device_id)
-    #
-    # def get_context_data(self, *args, **kwargs):
-    #     context = super().get_context_data(*args, **kwargs)
-    #     device_id = self.kwargs['device']
-    #     table = self.model.objects.get(device__device_id=device_id)
-    #     context['active_agm_device'] = 'treeview active'
-    #     context['active_agm_device_list'] = 'active'
-    #     context['table'] = table
-    #     return context
-
     def get_queryset(self):
         device_id = self.kwargs['device']
-        return self.model.objects.all().order_by('-id')
+        return self.model.objects.filter(device__device_id=device_id).order_by('-id')
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         table = self.table(self.get_queryset())
         table.paginate(page=self.request.GET.get('page', 1), per_page=self.paginate_by)
-        context['active_agm_device'] = 'treeview active'
-        context['active_agm_device_list'] = 'active'
+        context['active_admin_dash'] = 'treeview active'
         context['table'] = table
         return context
