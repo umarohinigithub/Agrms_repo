@@ -73,6 +73,8 @@ class DevicedataViewMore(tables.Table):
 
     def render_battery(self, value, record):
         battery_percentage = record.battery_percentage
+        if battery_percentage == 100:
+            return format_html(f'{record.battery_percentage}<div class="progress progress-xs"><div class="progress-bar progress-bar-green" style="width: 100%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">100% Complete</span></div></div>')
         if battery_percentage >= 90:
             return format_html(f'{record.battery_percentage}<div class="progress progress-xs"><div class="progress-bar progress-bar-green" style="width: 90%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">90% Complete</span></div></div>')
         if battery_percentage >= 75:
@@ -83,5 +85,3 @@ class DevicedataViewMore(tables.Table):
             return format_html(f'{record.battery_percentage}<div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width: 25%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">25% Complete</span></div></div>')
         if battery_percentage <= 25:
             return format_html(f'{record.battery_percentage}<div class="progress progress-xs"><div class="progress-bar progress-bar-red" style="width: 10%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">5% Complete</span></div></div>')
-        if battery_percentage == 100:
-            return format_html(f'{record.battery_percentage}<div class="progress progress-xs"><div class="progress-bar progress-bar-green" style="width: 100%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">100% Complete</span></div></div>')
