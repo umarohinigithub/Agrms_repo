@@ -2,7 +2,7 @@ import django_tables2 as tables
 from django.urls import reverse
 from django.utils.html import format_html
 
-from .models import AgrmsEmployee, AgmDevice, TelidosiDevice, AgmDeviceData
+from .models import AgrmsEmployee, AgmDevice, TelidosiDevice, AgmDeviceData, TelidosiData
 
 
 class EmployeeTable(tables.Table):
@@ -78,3 +78,12 @@ class DevicedataViewMore(tables.Table):
     # def render_delete(self, value, record):
     #     delete_url = reverse('delete_teledosimeter_view', kwargs={'device_id': record.id})
     #     return format_html(f'<a href="{delete_url}" class="btn btn-primary">Delete</a>')
+
+class TeledosidataViewMore(tables.Table):
+
+    class Meta:
+        model = TelidosiData
+        template_name = "django_tables2/bootstrap.html"
+        attrs = {'class': 'table table-sm'}
+        fields = ['device', 'employee_name', 'total_dose', 'count']
+

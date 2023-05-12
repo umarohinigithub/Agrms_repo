@@ -16,6 +16,7 @@ def run():
         for device in agrms_teledosi_devices:
             random_total_dose = random.randint(20, 100)
             random_count = random.randint(5, 20)
+            # employee_name = TelidosiData.objects.filter(device__employee_name=employee_name)
             TelidosiData.objects.create(device=device, total_dose=random_total_dose,
                                          count=random_count,
                                          )

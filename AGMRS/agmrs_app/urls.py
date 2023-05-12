@@ -4,7 +4,7 @@ from agmrs_app.views import TestTemplateView, AdminDashBoardView, AgmIndoorView,
     AdminLogoutView, TeledosiView, AddEmployeeView, ListEmployeeView, EditEmployeeView, DeleteEmployeeView, \
     AddAgmIndoorView, ListAgmIndoorView, EditAgmIndoorView, AddTeledosimeterView, ListTeledosimeterView, \
     EditTeledosimeterView, DeleteAgmIndoorView, DeleteTeledosimeterView, get_current_data_outdoor, \
-    get_current_data_indoor, get_data, AgmIndoorDeviceViewMore
+    get_current_data_indoor, get_data, AgmIndoorDeviceViewMore, get_current_data_teledosi, TeledosiDeviceViewMore
 
 urlpatterns = [
     # path('', AdminDashboardView.as_view(), name='admin_dashboard_view'),
@@ -36,7 +36,9 @@ urlpatterns = [
 
     path('get-current-data-outdoor/', get_current_data_outdoor, name='get_current_data_outdoor'),
     path('get-current-data-indoor/', get_current_data_indoor, name='get_current_data_indoor'),
+    path('get-current-data-teledosi/', get_current_data_teledosi, name='get_current_data_teledosi'),
 
     path('agm_device/view-more/<int:device>/', AgmIndoorDeviceViewMore.as_view(), name='indoor_device_data_view_more'),
+    path('teledosi_device/view-more/<int:device>/', TeledosiDeviceViewMore.as_view(), name='teledosi_device_data_view_more'),
 
 ]
