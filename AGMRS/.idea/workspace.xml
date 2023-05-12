@@ -23,8 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="def16758-5b99-4c12-a18b-fe995fa2b5ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/agmrs_app/table.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/table.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3-journal" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3-journal" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +139,7 @@
       <workItem from="1683783240605" duration="3418000" />
       <workItem from="1683788968492" duration="4448000" />
       <workItem from="1683819894103" duration="9893000" />
-      <workItem from="1683864886545" duration="12355000" />
+      <workItem from="1683864886545" duration="12952000" />
     </task>
     <servers />
   </component>
