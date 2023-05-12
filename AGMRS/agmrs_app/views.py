@@ -295,8 +295,6 @@ class AddTeledosimeterView(CreateView):
     model = AgmDevice
     success_url = reverse_lazy('list_teledosimeter_view')
 
-    # success_url = reverse_lazy('dashboard_view')
-
     def form_valid(self, form):
         form.instance = TelidosiDevice()
         form.instance.name = form.cleaned_data['name']

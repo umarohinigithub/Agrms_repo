@@ -1,12 +1,11 @@
     {% for data in device_data %}
     <div class="col-lg-3 col-xs-6">
-
         <div class="small-box {% if data.status == data.ALARM %}bg-red{% else %}bg-blue{% endif %}">
             <div class="inner">
                 <h2 style="font-size: 26px;">{{ data.location }}</h2>
-                <h4>Present Value:{{ data.present_value }} </h4>
-                <h4>24hrs Avg Value:{{ data.average_value }} </h4>
-                <h4>Status:{{ data.get_status_display }}</h4>
+                <h4 style="font-size: 14.5px;">Present Value   :      {{ data.present_value }} </h4>
+                <h4 style="font-size: 14.5px;">24hrs Avg Value  :   {{ data.average_value }} </h4>
+                <h4 style="font-size: 14.5px;">Status  :  {{ data.get_status_display }}</h4>
             </div>
             <div class="icon" data-percentage="{{ data.battery_percentage}}%"style="color: black; font-size:0px">
                 {% if data.battery_percentage >= 75 %}
@@ -19,15 +18,11 @@
                    <i class="fa fa-battery-0 text-gray" style="font-size: 30px;"></i>
                 {% endif %}
             </div>
-
             <div class="icon">
                 <i class="ion ion-bag"></i>
             </div>
-
        <a href="{% url 'indoor_device_data_view_more' data.device.id  %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
-
-
     </div>
      {% endfor %}
 
