@@ -12,7 +12,7 @@ from agmrs_app.filter import EmployeeFilter
 from agmrs_app.forms import AdminLoginForm, AddEmployeeForm, EditEmployeeForm, AddAgmIndoorForm, EditAgmIndoorForm, \
     AddTeledosimeterForm, EditTeledosimeterForm
 from agmrs_app.models import AgrmsEmployee, AgmDevice, TelidosiDevice, AgmDeviceData
-from agmrs_app.table import EmployeeTable, AgmIndoorTable, TeledosimeterTable
+from agmrs_app.table import EmployeeTable, AgmIndoorTable, TeledosimeterTable, DevicedataViewMore
 
 
 # Create your views here.
@@ -389,27 +389,36 @@ def get_data(request):
         return JsonResponse({'error': 'Invalid request.'})
 
 
-
 class AgmIndoorDeviceViewMore(SingleTableView, FilterView):
-    model = AgmDevice
-    table = AgmIndoorTable
+    model = AgmDeviceData
+    table = DevicedataViewMore
     template_name = 'agmrs_app/agm_indoor/device_agm_view_more.html'
 
-    # def get_queryset(self):
-    #     return self.model.objects.all().order_by('-id')
+    # def get_success_url(self):
+    #     device_id = self.kwargs['device_id']
+    #     return reverse('edit_agm_indoor_view', kwargs={'device_id': self.kwargs['device_id']})
+    #
+    # def get_object(self, queryset=None):
+    #     device_id = self.kwargs['device']
+    #     return self.model.objects.get(id=device_id)
+    #
+    # def get_context_data(self, *args, **kwargs):
+    #     context = super().get_context_data(*args, **kwargs)
+    #     device_id = self.kwargs['device']
+    #     table = self.model.objects.get(device__device_id=device_id)
+    #     context['active_agm_device'] = 'treeview active'
+    #     context['active_agm_device_list'] = 'active'
+    #     context['table'] = table
+    #     return context
 
-    def get_success_url(self):
-        device_id = self.kwargs['device_id']
-        return reverse('edit_agm_indoor_view', kwargs={'device_id': self.kwargs['device_id']})
-
-    def get_object(self, queryset=None):
+    def get_queryset(self):
         device_id = self.kwargs['device']
-        return self.model.objects.get(id=device_id)
+        return self.model.objects.all().order_by('-id')
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        device_id = self.kwargs['device']
-        table = self.model.objects.get(pk=device_id)
+        table = self.table(self.get_queryset())
+        table.paginate(page=self.request.GET.get('page', 1), per_page=self.paginate_by)
         context['active_agm_device'] = 'treeview active'
         context['active_agm_device_list'] = 'active'
         context['table'] = table

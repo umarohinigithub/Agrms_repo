@@ -23,39 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="def16758-5b99-4c12-a18b-fe995fa2b5ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/device_agm_view_more.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor_partial.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/widgets/dateholder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/widgets/datetimeholder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/widgets/fileinput.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/widgets/hiddenholder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/widgets/multiselectholder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/widgets/mytable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/widgets/mytable1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/widgets/placeholder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/widgets/selectholder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/widgets/table_without_slno.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/widgets/textareaplaceholder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/widgets/timeholder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AGMRS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AGMRS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/table.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/table.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/adminlte/lib/_main_sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/adminlte/lib/_main_sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/delete_agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/delete_agm_indoor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/edit_agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/edit_agm_indoor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/list_agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/list_agm_indoor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor_partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor_partial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agmrs_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/mock_data_area_outdoor.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/mock_data_area_outdoor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +112,7 @@
       <workItem from="1683783240605" duration="3418000" />
       <workItem from="1683788968492" duration="4448000" />
       <workItem from="1683819894103" duration="9893000" />
+      <workItem from="1683864886545" duration="990000" />
     </task>
     <servers />
   </component>
@@ -170,26 +140,30 @@
       <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state x="485" y="160" width="424" height="491" key="FileChooserDialogImpl/48.27.1318.741@48.27.1318.741" timestamp="1683795503500" />
-    <state width="1272" height="172" key="GridCell.Tab.0.bottom" timestamp="1683829810809">
+    <state width="1272" height="172" key="GridCell.Tab.0.bottom" timestamp="1683865087069">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state width="1272" height="172" key="GridCell.Tab.0.bottom/48.27.1318.741@48.27.1318.741" timestamp="1683829810809" />
-    <state width="1272" height="172" key="GridCell.Tab.0.center" timestamp="1683829810807">
+    <state width="1272" height="172" key="GridCell.Tab.0.bottom/48.27.1318.741@48.27.1318.741" timestamp="1683865087069" />
+    <state width="1272" height="172" key="GridCell.Tab.0.center" timestamp="1683865087068">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state width="1272" height="172" key="GridCell.Tab.0.center/48.27.1318.741@48.27.1318.741" timestamp="1683829810807" />
-    <state width="1272" height="172" key="GridCell.Tab.0.left" timestamp="1683829810806">
+    <state width="1272" height="172" key="GridCell.Tab.0.center/48.27.1318.741@48.27.1318.741" timestamp="1683865087068" />
+    <state width="1272" height="172" key="GridCell.Tab.0.left" timestamp="1683865087067">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state width="1272" height="172" key="GridCell.Tab.0.left/48.27.1318.741@48.27.1318.741" timestamp="1683829810806" />
-    <state width="1272" height="172" key="GridCell.Tab.0.right" timestamp="1683829810807">
+    <state width="1272" height="172" key="GridCell.Tab.0.left/48.27.1318.741@48.27.1318.741" timestamp="1683865087067" />
+    <state width="1272" height="172" key="GridCell.Tab.0.right" timestamp="1683865087069">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state width="1272" height="172" key="GridCell.Tab.0.right/48.27.1318.741@48.27.1318.741" timestamp="1683829810807" />
+    <state width="1272" height="172" key="GridCell.Tab.0.right/48.27.1318.741@48.27.1318.741" timestamp="1683865087069" />
     <state x="196" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1683795512761">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state x="196" y="31" width="1022" height="737" key="SettingsEditor/48.27.1318.741@48.27.1318.741" timestamp="1683795512761" />
+    <state x="302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1683865138106">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/48.27.1318.741@48.27.1318.741" timestamp="1683865138106" />
     <state x="398" y="136" width="807" height="522" key="find.popup" timestamp="1683797699742">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
