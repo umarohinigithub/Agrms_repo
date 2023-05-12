@@ -467,6 +467,7 @@ class AgmIndoorDeviceViewMore(SingleTableView, FilterView):
         context['table'] = table
         return context
 
+
 class TeledosiDeviceViewMore(SingleTableView, FilterView):
     model = TelidosiData
     table = TeledosidataViewMore
@@ -483,4 +484,3 @@ class TeledosiDeviceViewMore(SingleTableView, FilterView):
         context['active_admin_dash'] = 'treeview active'
         context['table'] = table
         return context
-

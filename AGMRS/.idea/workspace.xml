@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="def16758-5b99-4c12-a18b-fe995fa2b5ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/teledosi_view_more.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter_partial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AGMRS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AGMRS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGMRS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AGMRS/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/table.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor_partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor_partial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor_partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor_partial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/area_gamma_monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/area_gamma_monitor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/mock_data_teledosi.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/mock_data_teledosi.py" afterDir="false" />
+>>>>>>> c1d143b68e4f928426f1fae613d634737d4593cc
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="JupyterTrust" id="fbd01243-4ccf-4166-a9bb-cdc1ea9609c2" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PbA0SGPmN10Pt4JWY2rDUCWnw9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/elementz/PycharmProjects/ig_car/IGCAR_RTLS_WebProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="AGMRS" type="Python.DjangoServer" factoryName="Django server">
+      <module name="AGMRS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="AGMRS.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.mock_data_area_outdoor" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="def16758-5b99-4c12-a18b-fe995fa2b5ae" name="Default Changelist" comment="" />
+      <created>1683715218272</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683715218272</updated>
+      <workItem from="1683715231605" duration="906000" />
+      <workItem from="1683776891550" duration="648000" />
+      <workItem from="1683779902292" duration="1439000" />
+      <workItem from="1683783240605" duration="3418000" />
+      <workItem from="1683788968492" duration="10458000" />
+=======
+>>>>>>> c277aa43110c28d7bb401059aca0ca2e44ed14e5
+>>>>>>> c1d143b68e4f928426f1fae613d634737d4593cc
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AGMRS$mock_data_area_outdoor.coverage" NAME="mock_data_area_outdoor Coverage Results" MODIFIED="1683877731308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+  </component>
+</project>

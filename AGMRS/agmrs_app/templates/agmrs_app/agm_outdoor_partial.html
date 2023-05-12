@@ -10,26 +10,19 @@
             </div>
             <div class="icon" data-percentage="{{ data.battery_percentage}}%"style="color: black; font-size:0px">
                 {% if data.battery_percentage >= 75 %}
-                    <i class="fa fa-battery-full" style="color:darkgreen;font-size: 30px;"></i>
+                    <i class="fa fa-battery-full text-green" style="font-size: 30px;"></i>
                 {% elif data.battery_percentage >= 50 %}
                    <i class="fa fa-battery-half text-yellow" style="font-size: 30px;"></i>
                 {% elif data.battery_percentage >= 25 %}
-                    <i class="fa fa-battery-1 " style="font-size: 30px;color: darkred"></i>
+                    <i class="fa fa-battery-1 text-red" style="font-size: 30px;"></i>
                  {%else %}
                    <i class="fa fa-battery-0 text-gray" style="font-size: 30px;"></i>
                 {% endif %}
             </div>
 
-<<<<<<< HEAD
-            <div class="icon">
-                <i class="ion ion-bag"></i>
-            </div>
-            <a href="{% url 'indoor_device_data_view_more' data.device.id  %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>  </div>
-=======
 {#            <div class="icon">#}
 {#                <i class="ion ion-bag"></i>#}
 {#            </div>#}
         <a href="{% url 'indoor_device_data_view_more' data.device.id  %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>        </div>
->>>>>>> 7416051200193a5b00158ecf9b3b1f50ce05eca5
     </div>
      {% endfor %}
