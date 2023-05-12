@@ -3,6 +3,13 @@
 
 {% block content %}
     <div class="box box-primary">
+     <div class="box-header with-border">
+         <h3 class="box-title">Previous Device Data</h3>
+         <a href="{% url 'teledosi_view' %}">
+            <button type="submit" class="btn btn-primary" style="margin-left: 77%;">Back</button>
+         </a>
+        </div>
+
      <div class="box-body">
             {% render_table table "widgets/mytable.html"%}
         </div>
