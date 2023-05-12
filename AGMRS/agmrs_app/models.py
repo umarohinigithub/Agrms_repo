@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class AgrmsEmployee(models.Model):
@@ -9,6 +10,7 @@ class AgrmsEmployee(models.Model):
     def __str__(self):
         return self.name
 
+
 class TelidosiDevice(models.Model):
     device_id = models.CharField(max_length=100, unique=True)
     name = models.CharField(max_length=100)
@@ -16,6 +18,7 @@ class TelidosiDevice(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class TelidosiData(models.Model):
     device = models.ForeignKey(TelidosiDevice, on_delete=models.CASCADE)
@@ -28,8 +31,6 @@ class AgmDevice(models.Model):
     INDOOR = 'indoor'
     OUTDOOR = 'outdoor'
     DEVICE_TYPE_CHOICES = [
-        ('indoor', 'Indoor'),
-        ('outdoor', 'Outdoor'),
         (INDOOR, 'Indoor'),
         (OUTDOOR, 'Outdoor'),
     ]
@@ -46,14 +47,6 @@ class AgmDevice(models.Model):
 
 
 class AgmDeviceData(models.Model):
-    INDOOR = 'indoor'
-    OUTDOOR = 'outdoor'
-    DEVICE_TYPE_CHOICES = [
-        ('indoor', 'Indoor'),
-        ('outdoor', 'Outdoor'),
-        (INDOOR, 'Indoor'),
-        (OUTDOOR, 'Outdoor'),
-    ]
     ALARM = 'alarm'
     NORMAL = 'normal'
     STATUS_CHOICES = (
@@ -67,6 +60,3 @@ class AgmDeviceData(models.Model):
     date_time = models.DateTimeField(auto_now=True)
     battery_percentage = models.FloatField(default=0)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES)
-    device_type = models.CharField(max_length=10, choices=DEVICE_TYPE_CHOICES)
-
-

@@ -30,9 +30,8 @@ class AgmIndoorTable(tables.Table):
     class Meta:
         model = AgmDevice
         template_name = "django_tables2/bootstrap.html"
-        attrs = {'class': 'table table-sm'}
-        # fields = ('employee_id', 'name')  # Add more fields as needed
-        fields = ['device_type','name', 'device_id' ]
+        attrs = {"class": "table table-container table-responsive table-hover"}
+        fields = ['device_type', 'name', 'device_id' ]
 
     def render_edit(self, value, record):
         edit_url = reverse('edit_agm_indoor_view', kwargs={'device_id': record.id})

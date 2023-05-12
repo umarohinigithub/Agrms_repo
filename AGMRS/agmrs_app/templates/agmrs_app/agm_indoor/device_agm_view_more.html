@@ -1,0 +1,124 @@
+{% extends 'agmrs_app/base.html' %}
+
+{% block content %}
+    <div class="box box-primary">
+
+   <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">Device Details</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table class="table table-bordered">
+{#                <tr>#}
+{#                  <th style="width: 10px">#</th>#}
+{#                  <th>Task</th>#}
+{#                  <th>Progress</th>#}
+{#                  <th style="width: 40px">Label</th>#}
+{#                </tr>#}
+                <tr>
+                  <td>1.</td>
+                  <td>Device Name</td>
+                  <td>
+                      {{ table.name }}
+
+{#                    <div class="progress progress-xs">#}
+{#                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>#}
+{#                    </div>#}
+                  </td>
+                  <td>
+{#                      <span class="badge bg-red">55%</span>#}
+                  </td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>Device ID</td>
+                  <td>
+                    {{ table.device_id }}
+                  </td>
+                  <td>
+{#                      <span class="badge bg-yellow">%</span>#}
+                  </td>
+                </tr>
+                <tr>
+                  <td>3.</td>
+                  <td>Device Type</td>
+                  <td>
+                    {{ table.device_type }}
+                  </td>
+                  <td>
+                      <span class="badge bg-light-blue"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td>location</td>
+                  <td>
+                    location
+                  </td>
+                  <td>
+{#                      <span class="badge bg-green">90%</span>#}
+                  </td>
+                </tr>
+                   <tr>
+                  <td>5.</td>
+                  <td>Battery_percentage</td>
+                  <td>
+                    <div class="progress progress-xs progress-striped active">
+                      <div class="progress-bar progress-bar-success" style="width: 90%"></div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-green">90%</span></td>
+                </tr>
+                  <tr>
+                  <td>6.</td>
+                  <td>Present Value</td>
+                  <td>
+                    Present Value
+                  </td>
+                  <td>
+{#                      <span class="badge bg-green">90%</span>#}
+                  </td>
+                </tr>
+
+                   <tr>
+                  <td>7.</td>
+                  <td>24hrs Avg Value</td>
+                  <td>
+                    24hrs Avg Value
+                  </td>
+                  <td>
+{#                      <span class="badge bg-green">90%</span>#}
+                  </td>
+                </tr>
+
+                   <tr>
+                  <td>8.</td>
+                  <td>Status</td>
+                  <td>
+                    Status
+                  </td>
+                  <td>
+{#                      <span class="badge bg-green">90%</span>#}
+                  </td>
+                </tr>
+
+              </table>
+            </div>
+            <!-- /.box-body -->
+
+          </div>
+          <!-- /.box -->
+
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    </div>
+{% endblock %}
