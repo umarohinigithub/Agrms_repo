@@ -64,7 +64,6 @@ class TeledosimeterTable(tables.Table):
 class DevicedataViewMore(tables.Table):
     edit = tables.Column(empty_values=(), verbose_name='Edit')
     delete = tables.Column(empty_values=(), verbose_name='Delete')
-
     class Meta:
         model = AgmDeviceData
         template_name = "django_tables2/bootstrap.html"
