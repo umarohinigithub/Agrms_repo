@@ -27,6 +27,7 @@
       <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/mock_data_area_outdoor.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/mock_data_area_outdoor.py" afterDir="false" />
+>>>>>>> c277aa43110c28d7bb401059aca0ca2e44ed14e5
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +47,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="JupyterTrust" id="fbd01243-4ccf-4166-a9bb-cdc1ea9609c2" />
   <component name="MarkdownSettingsMigration">
@@ -57,49 +59,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/agmrs_app/templates" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/agmrs_app/static/img" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/agmrs_app/templates" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Django Server.AGMRS">
-    <configuration name="mock_data_area_outdoor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AGMRS" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/mock_data_area_outdoor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/elementz/PycharmProjects/ig_car/IGCAR_RTLS_WebProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
     <configuration name="AGMRS" type="Python.DjangoServer" factoryName="Django server">
       <module name="AGMRS" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,9 +118,8 @@
       <workItem from="1683776891550" duration="648000" />
       <workItem from="1683779902292" duration="1439000" />
       <workItem from="1683783240605" duration="3418000" />
-      <workItem from="1683788968492" duration="4448000" />
-      <workItem from="1683819894103" duration="9893000" />
-      <workItem from="1683864886545" duration="12960000" />
+      <workItem from="1683788968492" duration="10458000" />
+>>>>>>> c277aa43110c28d7bb401059aca0ca2e44ed14e5
     </task>
     <servers />
   </component>
@@ -161,45 +136,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="165" y="55" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1683795533001">
-      <screen x="48" y="27" width="1318" height="741" />
-    </state>
-    <state x="165" y="55" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog/48.27.1318.741@48.27.1318.741" timestamp="1683795533001" />
-    <state x="485" y="160" width="424" height="491" key="FileChooserDialogImpl" timestamp="1683795503500">
-      <screen x="48" y="27" width="1318" height="741" />
-    </state>
-    <state x="485" y="160" width="424" height="491" key="FileChooserDialogImpl/48.27.1318.741@48.27.1318.741" timestamp="1683795503500" />
-    <state width="1272" height="172" key="GridCell.Tab.0.bottom" timestamp="1683889554940">
-      <screen x="48" y="27" width="1318" height="741" />
-    </state>
-    <state width="1272" height="172" key="GridCell.Tab.0.bottom/48.27.1318.741@48.27.1318.741" timestamp="1683889554940" />
-    <state width="1272" height="172" key="GridCell.Tab.0.center" timestamp="1683889554940">
-      <screen x="48" y="27" width="1318" height="741" />
-    </state>
-    <state width="1272" height="172" key="GridCell.Tab.0.center/48.27.1318.741@48.27.1318.741" timestamp="1683889554940" />
-    <state width="1272" height="172" key="GridCell.Tab.0.left" timestamp="1683889554939">
-      <screen x="48" y="27" width="1318" height="741" />
-    </state>
-    <state width="1272" height="172" key="GridCell.Tab.0.left/48.27.1318.741@48.27.1318.741" timestamp="1683889554939" />
-    <state width="1272" height="172" key="GridCell.Tab.0.right" timestamp="1683889554940">
-      <screen x="48" y="27" width="1318" height="741" />
-    </state>
-    <state width="1272" height="172" key="GridCell.Tab.0.right/48.27.1318.741@48.27.1318.741" timestamp="1683889554940" />
-    <state x="196" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1683795512761">
-      <screen x="48" y="27" width="1318" height="741" />
-    </state>
-    <state x="196" y="31" width="1022" height="737" key="SettingsEditor/48.27.1318.741@48.27.1318.741" timestamp="1683795512761" />
-    <state x="302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1683866107548">
-      <screen x="48" y="27" width="1318" height="741" />
-    </state>
-    <state x="302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/48.27.1318.741@48.27.1318.741" timestamp="1683866107548" />
-    <state x="398" y="136" width="807" height="522" key="find.popup" timestamp="1683797699742">
-      <screen x="48" y="27" width="1318" height="741" />
-    </state>
-    <state x="398" y="136" width="807" height="522" key="find.popup/48.27.1318.741@48.27.1318.741" timestamp="1683797699742" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AGMRS$mock_data_area_outdoor.coverage" NAME="mock_data_area_outdoor Coverage Results" MODIFIED="1683877731308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />

@@ -43,7 +43,12 @@
     </section>
 {% endblock %}
 {% block content %}
+<<<<<<< HEAD
+  <div class="row" id="device_data"   hx-get="{% url 'get_current_data_outdoor' %}" hx-trigger="every 2s" >
+{% include 'agmrs_app/agm_outdoor_partial.html' %}
+=======
   <div class="row" id="device_data"   hx-get="{% url 'get_current_data_outdoor' %}" hx-trigger="every 2s" style="margin-top: 1%">
     {% include 'agmrs_app/agm_outdoor_partial.html' %}
+>>>>>>> 7416051200193a5b00158ecf9b3b1f50ce05eca5
   </div>
 {% endblock %}

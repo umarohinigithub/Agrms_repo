@@ -36,6 +36,7 @@ urlpatterns = [
 
     path('get-current-data-outdoor/', get_current_data_outdoor, name='get_current_data_outdoor'),
     path('get-current-data-indoor/', get_current_data_indoor, name='get_current_data_indoor'),
+    path('get-current-data-teledosi/', get_current_data_teledosi, name='get_current_data_teledosi'),
 
     path('agm_device/view-more/<int:device>/', AgmIndoorDeviceViewMore.as_view(), name='indoor_device_data_view_more'),
     path('get-current-data-teledosi/', get_current_data_teledosi, name='get_current_data_teledosi'),

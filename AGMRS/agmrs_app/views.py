@@ -109,6 +109,19 @@ def get_current_data_indoor(request):
         print("+++++++++++++++++", data_ids)
         context['device_data'] = AgmDeviceData.objects.filter(id__in=data_ids)
         return render(request, template_name='agmrs_app/agm_indoor_partial.html', context=context)
+def get_current_data_teledosi(request):
+    print("get_current_data_teledosi")
+    context = {}
+    if request.htmx:
+        devices_teledosi = TelidosiDevice.objects.all()
+        data_ids = []
+        for device in devices_teledosi:
+            device_data = TelidosiData.objects.filter(device=device).last()
+            if device_data:
+                data_ids.append(device_data.id)
+        # print("+++++++++++++++++", data_ids)
+        context['device_data'] = TelidosiData.objects.filter(id__in=data_ids)
+        return render(request, template_name='agmrs_app/teledosimeter_partial.html', context=context)
 
 def get_current_data_teledosi(request):
     print("get_current_data_teledosi")
@@ -146,6 +159,18 @@ class TeledosiView(TemplateView):
     template_name = 'agmrs_app/teledosimeter.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        devices_outdoor = AgmDevice.objects.filter(device_type=AgmDevice.OUTDOOR)
+        data_ids = []
+        for device in devices_outdoor:
+            device_data = AgmDeviceData.objects.filter(device=device).last()
+            if device_data:
+                data_ids.append(device_data.id)
+        print("+++++++++++++++++", data_ids)
+        context['device_data'] = AgmDeviceData.objects.filter(id__in=data_ids)
+        context['active_admin_dash'] = 'active treeview menu-open'
+        return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
         devices_teledosi = TelidosiDevice.objects.all()
         data_ids = []
         for device in devices_teledosi:
@@ -157,7 +182,7 @@ class TeledosiView(TemplateView):
         return context
 
 
-class AddEmployeeView(FormView):
+class AddEmployeeView(CreateView):
     template_name = 'agmrs_app/agm_employee/add_employee.html'
     form_class = AddEmployeeForm
     model = AgrmsEmployee
@@ -169,16 +194,12 @@ class AddEmployeeView(FormView):
         context['active_teledosimeter_add_emp'] = 'active'
         return context
 
-    # def form_valid(self, form):
-    #     if form.is_valid():
-    #         data = form.cleaned_data
-    #         # employee_id = form.cleaned_data['employee_id']
-    #         # name = form.cleaned_data['name']
-    #         # print(name)
-    #         form.save()
-    #         return redirect('list_employee_view')
-    #     else:
-    #         print(form.errors)
+    def form_valid(self, form):
+        if form.is_valid():
+            print("form valid")
+            form.save()
+        messages.add_message(self.request, messages.SUCCESS, 'Added Successfully.')
+        return super(AddEmployeeView, self).form_valid(form)
 
 
 class ListEmployeeView(SingleTableView, FilterView):
@@ -207,6 +228,19 @@ class EditEmployeeView(UpdateView):
         employee_id = self.kwargs.get('employee_id')
         return self.model.objects.get(id=employee_id)
 
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['active_teledosimeter'] = 'active treeview menu-open'
+        context['active_teledosimeter_list_emp'] = 'active'
+        return context
+
+    def form_valid(self, form):
+        if form.is_valid():
+            print("form valid")
+            form.save()
+        messages.add_message(self.request, messages.SUCCESS, 'Updated Successfully.')
+        return super(EditEmployeeView, self).form_valid(form)
+
 
 class DeleteEmployeeView(DeleteView):
     model = AgrmsEmployee
@@ -220,11 +254,14 @@ class DeleteEmployeeView(DeleteView):
         messages.success(self.request, self.success_message)
         return super(DeleteEmployeeView, self).delete(request, *args, **kwargs)
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['active_imp_operator'] = "active"  # sidebar active tag
-        context['active_imp_users'] = "active openable open"  # sidebar active tag
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['active_teledosimeter'] = 'active treeview menu-open'
+        context['active_teledosimeter_list_emp'] = 'active'
         return context
+    def form_valid(self, form):
+        messages.add_message(self.request, messages.SUCCESS, 'Deleted Successfully.')
+        return super(DeleteEmployeeView, self).form_valid(form)
 
 
 class AddAgmIndoorView(CreateView):
@@ -317,18 +354,12 @@ class AddTeledosimeterView(CreateView):
     success_url = reverse_lazy('list_teledosimeter_view')
 
     def form_valid(self, form):
-        form.instance = TelidosiDevice()
-        form.instance.name = form.cleaned_data['name']
-        form.instance.device_id = form.cleaned_data['device_id']
-        # Save the form instance
-        employee_name = form.cleaned_data['employee_name']
-        employee = AgrmsEmployee.objects.get(name=employee_name)
+        if form.is_valid():
+            print("form valid")
+            form.save()
+        messages.add_message(self.request, messages.SUCCESS, 'Added Successfully.')
+        return super(AddTeledosimeterView, self).form_valid(form)
 
-        # Assign the employee instance to the employee_name field
-        form.instance.employee_name = employee
-        form.instance.save()
-
-        return redirect(self.success_url)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -375,6 +406,13 @@ class EditTeledosimeterView(UpdateView):
         context['active_teledosimeter_list_tele'] = 'active'
         return context
 
+    def form_valid(self, form):
+        if form.is_valid():
+            print("form valid")
+            form.save()
+        messages.add_message(self.request, messages.SUCCESS, 'Updated Successfully.')
+        return super(EditTeledosimeterView, self).form_valid(form)
+
 
 class DeleteTeledosimeterView(DeleteView):
     template_name = 'agmrs_app/teledosimeter/delete_teledosimeter.html'
@@ -389,6 +427,10 @@ class DeleteTeledosimeterView(DeleteView):
         context['active_teledosimeter'] = 'treeview active'
         context['active_teledosimeter_list_tele'] = 'active'
         return context
+
+    def form_valid(self, form):
+        messages.add_message(self.request, messages.SUCCESS, 'Deleted Successfully.')
+        return super(DeleteTeledosimeterView, self).form_valid(form)
 
 
 def get_data(request):
@@ -425,7 +467,6 @@ class AgmIndoorDeviceViewMore(SingleTableView, FilterView):
         context['table'] = table
         return context
 
-
 class TeledosiDeviceViewMore(SingleTableView, FilterView):
     model = TelidosiData
     table = TeledosidataViewMore
@@ -442,3 +483,4 @@ class TeledosiDeviceViewMore(SingleTableView, FilterView):
         context['active_admin_dash'] = 'treeview active'
         context['table'] = table
         return context
+
