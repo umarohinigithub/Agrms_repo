@@ -2,7 +2,7 @@ import django_tables2 as tables
 from django.urls import reverse
 from django.utils.html import format_html
 
-from .models import AgrmsEmployee, AgmDevice, TelidosiDevice, AgmDeviceData
+from .models import AgrmsEmployee, AgmDevice, TelidosiDevice, AgmDeviceData, TelidosiData
 
 
 class EmployeeTable(tables.Table):
@@ -85,3 +85,12 @@ class DevicedataViewMore(tables.Table):
             return format_html(f'{record.battery_percentage}<div class="progress progress-xs"><div class="progress-bar progress-bar-yellow" style="width: 25%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">25% Complete</span></div></div>')
         if battery_percentage <= 25:
             return format_html(f'{record.battery_percentage}<div class="progress progress-xs"><div class="progress-bar progress-bar-red" style="width: 10%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">5% Complete</span></div></div>')
+
+
+class TeledosidataViewMore(tables.Table):
+
+    class Meta:
+        model = TelidosiData
+        template_name = "django_tables2/bootstrap.html"
+        attrs = {'class': 'table table-sm'}
+        fields = ['device', 'employee_name', 'total_dose', 'count']

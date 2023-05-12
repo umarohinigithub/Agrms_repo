@@ -11,8 +11,8 @@ from django_tables2 import SingleTableView
 from agmrs_app.filter import EmployeeFilter
 from agmrs_app.forms import AdminLoginForm, AddEmployeeForm, EditEmployeeForm, AddAgmIndoorForm, EditAgmIndoorForm, \
     AddTeledosimeterForm, EditTeledosimeterForm
-from agmrs_app.models import AgrmsEmployee, AgmDevice, TelidosiDevice, AgmDeviceData
-from agmrs_app.table import EmployeeTable, AgmIndoorTable, TeledosimeterTable, DevicedataViewMore
+from agmrs_app.models import AgrmsEmployee, AgmDevice, TelidosiDevice, AgmDeviceData, TelidosiData
+from agmrs_app.table import EmployeeTable, AgmIndoorTable, TeledosimeterTable, DevicedataViewMore, TeledosidataViewMore
 
 
 # Create your views here.
@@ -109,6 +109,20 @@ def get_current_data_indoor(request):
         context['device_data'] = AgmDeviceData.objects.filter(id__in=data_ids)
         return render(request, template_name='agmrs_app/agm_indoor_partial.html', context=context)
 
+def get_current_data_teledosi(request):
+    print("get_current_data_teledosi")
+    context = {}
+    if request.htmx:
+        devices_teledosi = TelidosiDevice.objects.all()
+        data_ids = []
+        for device in devices_teledosi:
+            device_data = TelidosiData.objects.filter(device=device).last()
+            if device_data:
+                data_ids.append(device_data.id)
+        # print("+++++++++++++++++", data_ids)
+        context['device_data'] = TelidosiData.objects.filter(id__in=data_ids)
+        return render(request, template_name='agmrs_app/teledosimeter_partial.html', context=context)
+
 
 class AgmOutdoorView(TemplateView):
     template_name = 'agmrs_app/agm_outdoor.html'
@@ -132,7 +146,15 @@ class TeledosiView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['teledata'] = TelidosiDevice.objects.order_by('-date_time')[:5]
+        devices_teledosi = TelidosiDevice.objects.all()
+        data_ids = []
+        for device in devices_teledosi:
+            device_data = TelidosiData.objects.filter(device=device).last()
+            if device_data:
+                data_ids.append(device_data.id)
+        # print("+++++++++++++++++", data_ids)
+        context['device_data'] = TelidosiData.objects.filter(id__in=data_ids)
+        context['active_admin_dash'] = 'active treeview menu-open'
         return context
 
 
@@ -391,6 +413,24 @@ class AgmIndoorDeviceViewMore(SingleTableView, FilterView):
     model = AgmDeviceData
     table = DevicedataViewMore
     template_name = 'agmrs_app/agm_indoor/device_agm_view_more.html'
+
+    def get_queryset(self):
+        device_id = self.kwargs['device']
+        return self.model.objects.filter(device__device_id=device_id).order_by('-id')
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        table = self.table(self.get_queryset())
+        table.paginate(page=self.request.GET.get('page', 1), per_page=self.paginate_by)
+        context['active_admin_dash'] = 'treeview active'
+        context['table'] = table
+        return context
+
+
+class TeledosiDeviceViewMore(SingleTableView, FilterView):
+    model = TelidosiData
+    table = TeledosidataViewMore
+    template_name = 'agmrs_app/teledosimeter/teledosi_view_more.html'
 
     def get_queryset(self):
         device_id = self.kwargs['device']
