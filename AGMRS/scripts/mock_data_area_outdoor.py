@@ -19,4 +19,4 @@ def run():
                                          present_value=random_present,
                                          average_value=10, status=AgmDeviceData.ALARM)
 
-        time.sleep(10)
+        time.sleep(1)

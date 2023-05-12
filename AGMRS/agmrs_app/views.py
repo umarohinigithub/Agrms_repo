@@ -73,7 +73,7 @@ class AgmIndoorView(TemplateView):
             if device_data:
                 data_ids.append(device_data.id)
         context['device_data'] = AgmDeviceData.objects.filter(id__in=data_ids)
-
+        context['active_admin_dash'] = 'active treeview menu-open'
         return context
 
 
@@ -339,8 +339,6 @@ class AddTeledosimeterView(CreateView):
     form_class = AddTeledosimeterForm
     model = AgmDevice
     success_url = reverse_lazy('list_teledosimeter_view')
-
-    # success_url = reverse_lazy('dashboard_view')
 
     def form_valid(self, form):
         if form.is_valid():
