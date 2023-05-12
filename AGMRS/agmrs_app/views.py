@@ -73,7 +73,7 @@ class AgmIndoorView(TemplateView):
             if device_data:
                 data_ids.append(device_data.id)
         context['device_data'] = AgmDeviceData.objects.filter(id__in=data_ids)
-
+        context['active_admin_dash'] = 'active treeview menu-open'
         return context
 
 

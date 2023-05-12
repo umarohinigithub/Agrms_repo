@@ -23,12 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="def16758-5b99-4c12-a18b-fe995fa2b5ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/device_agm_view_more.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/device_agm_view_more.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor_partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor_partial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor_partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_outdoor_partial.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agmrs_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -118,7 +112,7 @@
       <workItem from="1683783240605" duration="3418000" />
       <workItem from="1683788968492" duration="4448000" />
       <workItem from="1683819894103" duration="9893000" />
-      <workItem from="1683864886545" duration="6889000" />
+      <workItem from="1683864886545" duration="7438000" />
     </task>
     <servers />
   </component>
