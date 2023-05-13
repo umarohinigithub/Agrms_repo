@@ -1,18 +1,26 @@
+{% load static %}
 
 {% for data in device_data %}
-        <div class="col-lg-3 col-xs-6">
+        <div class="col-lg-3 col-xs-6" >
 
             <div class="small-box bg-aqua" >
-                <div class="inner">
-                    <h1>Employee Name:{{ data.employee_name }}</h1>
-                    <h4>Device Id:{{ data.device_id }} </h4>
-                    <h4>Total Dose:{{ data.total_dose }} </h4>
-                    <h4>Count:{{ data.count }}</h4>
+                <div class="inner" >
+                    <div class="user-block" >
+                    <img class="img-circle img-bordered-sm" src="{% static 'img/219983.png' %}" alt="user image">
+                        <span class="username">
+                          <a href="#" style="color: black">{{ data.device.employee_name }}</a>
+                        </span>
+                    <span class="description">Employee</span>
+                   </div>
+
+                    <h4 style="font-size: 14.5px;">Device Id : {{ data.device_id }} </h4>
+                    <h4 style="font-size: 14.5px;">Total Dose : {{ data.total_dose }} </h4>
+                    <h4 style="font-size: 14.5px;">Count : {{ data.count }}</h4>
                 </div>
 
-                <div class="icon">
-                    <i class="ion ion-bag"></i>
-                </div>
+{#                <div class="icon">#}
+{#                    <i class="ion ion-bag"></i>#}
+{#                </div>#}
 {#                <a href="#" class="small-box-footer" data-toggle="modal" data-target="#modal-success">More info <i class="fa fa-arrow-circle-right"></i></a>#}
 
         <a href="{% url 'teledosi_device_data_view_more' data.device.id  %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
