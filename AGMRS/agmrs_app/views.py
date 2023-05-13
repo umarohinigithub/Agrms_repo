@@ -276,6 +276,7 @@ class ListAgmIndoorView(SingleTableView, FilterView):
     model = AgmDevice
     table = AgmIndoorTable
     template_name = 'agmrs_app/agm_indoor/list_agm_indoor.html'
+    paginate_by = 10
 
     def get_queryset(self):
         return self.model.objects.all().order_by('-id')

@@ -23,8 +23,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="def16758-5b99-4c12-a18b-fe995fa2b5ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGMRS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AGMRS/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/table.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/add_employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/add_employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/delete_employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/delete_employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/edit_employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/edit_employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/list_employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_employee/list_employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/add_agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/add_agm_indoor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/delete_agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/delete_agm_indoor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/edit_agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/edit_agm_indoor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/list_agm_indoor.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor/list_agm_indoor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/add_teledosimeter.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/add_teledosimeter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/delete_teledosimeter.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/delete_teledosimeter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/edit_teledosimeter.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/edit_teledosimeter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/list_teledosimeter.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/list_teledosimeter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/teledosi_view_more.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter/teledosi_view_more.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter_partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter_partial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

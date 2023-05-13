@@ -4,6 +4,9 @@
     <div class="box">
         <div class="box-header with-border">
             <h3 class="box-title">Employee List</h3>
+            <a href="{% url 'add_employee_view' %}">
+            <button type="submit" class="btn btn-primary" style="margin-left: 77%;">Add New Employee</button>
+         </a>
         </div>
         <div class="box-body">
             {% render_table table %}

@@ -93,4 +93,4 @@ class TeledosidataViewMore(tables.Table):
         model = TelidosiData
         template_name = "django_tables2/bootstrap.html"
         attrs = {'class': 'table table-sm'}
-        fields = ['device', 'device__employee_name', 'total_dose', 'count']
+        fields = ['device', 'device__employee_name','date_time', 'total_dose', 'count']
