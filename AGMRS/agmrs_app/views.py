@@ -159,18 +159,6 @@ class TeledosiView(TemplateView):
     template_name = 'agmrs_app/teledosimeter.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        devices_outdoor = AgmDevice.objects.filter(device_type=AgmDevice.OUTDOOR)
-        data_ids = []
-        for device in devices_outdoor:
-            device_data = AgmDeviceData.objects.filter(device=device).last()
-            if device_data:
-                data_ids.append(device_data.id)
-        print("+++++++++++++++++", data_ids)
-        context['device_data'] = AgmDeviceData.objects.filter(id__in=data_ids)
-        context['active_admin_dash'] = 'active treeview menu-open'
-        return context
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
         devices_teledosi = TelidosiDevice.objects.all()
         data_ids = []
         for device in devices_teledosi:

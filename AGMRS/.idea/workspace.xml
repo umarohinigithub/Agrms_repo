@@ -24,6 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="def16758-5b99-4c12-a18b-fe995fa2b5ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/AGMRS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AGMRS/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter_partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/teledosimeter_partial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +112,7 @@
       <workItem from="1683779902292" duration="1439000" />
       <workItem from="1683783240605" duration="3418000" />
       <workItem from="1683788968492" duration="10458000" />
+      <workItem from="1683951401910" duration="310000" />
     </task>
     <servers />
   </component>
