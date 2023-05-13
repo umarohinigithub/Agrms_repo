@@ -3,9 +3,9 @@
         <div class="small-box {% if data.status == data.ALARM %}bg-red{% else %}bg-blue{% endif %}">
             <div class="inner">
                 <h2 style="font-size: 26px;">{{ data.location }}</h2>
-                <h4 style="font-size: 14.5px;">Present Value   :      {{ data.present_value }} </h4>
-                <h4 style="font-size: 14.5px;">24hrs Avg Value  :   {{ data.average_value }} </h4>
-                <h4 style="font-size: 14.5px;">Status  :  {{ data.get_status_display }}</h4>
+                <h4 style="font-size: 20px;"><b>Present Value   : {{ data.present_value }}</b> </h4>
+                <h4 style="font-size: 20px;"><b>24hrs Avg Value  :   {{ data.average_value }}</b> </h4>
+                <h4 style="font-size: 20px;"><b>Status  : {{ data.get_status_display }}</b></h4>
             </div>
             <div class="icon" data-percentage="{{ data.battery_percentage}}%"style="color: black; font-size:0px">
                 {% if data.battery_percentage >= 75 %}
