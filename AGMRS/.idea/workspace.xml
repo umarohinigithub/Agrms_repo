@@ -23,9 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="def16758-5b99-4c12-a18b-fe995fa2b5ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGMRS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AGMRS/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor_partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/agmrs_app/templates/agmrs_app/agm_indoor_partial.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +119,7 @@
       <workItem from="1683788968492" duration="10458000" />
       <workItem from="1683951401910" duration="310000" />
       <workItem from="1683956645404" duration="20000" />
-      <workItem from="1683956668448" duration="5269000" />
+      <workItem from="1683956668448" duration="6637000" />
     </task>
     <servers />
   </component>
